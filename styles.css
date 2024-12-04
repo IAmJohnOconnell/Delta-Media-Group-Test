@@ -1,0 +1,346 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Open Sans", sans-serif;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+.hero {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("/assets/quick-search-bg.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	@media screen and (min-width: 768px) {
+		height: 100vh;
+	}
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+nav img.navLogo {
+	margin-right: 1rem;
+}
+
+nav ul.navLinks {
+	display: none;
+	padding: 0px;
+
+	@media (min-width: 768px) {
+		display: flex;
+		gap: 0.5rem;
+		list-style: none;
+		align-items: center;
+		justify-content: end;
+	}
+}
+
+#phoneNumber {
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+
+	@media screen and (min-width: 970px) {
+		display: initial;
+	}
+}
+
+nav div.mobile-icon {
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
+
+nav div.navLogin {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 0.5rem;
+	white-space: nowrap;
+}
+
+nav div.navLogin li:nth-child(2) {
+	margin: 0px 5px;
+}
+
+.headline {
+	text-align: center;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vw;
+	margin-top: 20%;
+	gap: 0.5rem;
+}
+
+.headline h1 {
+	font-family: "Raleway", sans-serif;
+	@media screen and (min-width: 544px) {
+		font-size: 60px;
+	}
+}
+
+.headline h1 span {
+	font-weight: normal;
+}
+
+.headline hr {
+	width: 30%;
+	margin: 0 auto;
+	border: 1px solid #fff;
+}
+
+.headline h2 {
+	font-family: "Open Sans", sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	@media screen and (min-width: 544px) {
+		margin: 1rem 0;
+		font-size: 24px;
+	}
+}
+
+.quickSearchInputContainer {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	margin: 0 auto;
+	gap: 1px;
+
+	@media screen and (min-width: 544px) {
+		width: 80%;
+	}
+
+	@media screen and (min-width: 768px) {
+		width: 50%;
+	}
+}
+
+.quickSearchInput input {
+	width: 100%;
+}
+
+.quickSearchInput input::placeholder {
+	opacity: 0.7;
+}
+
+.quickSearchInput button {
+	border: none;
+	padding: 0;
+}
+
+button.searchNearMe {
+	border: none;
+	background-color: transparent;
+	margin: 5px auto;
+	padding: 0;
+}
+
+.cardRow {
+	display: flex;
+	flex-direction: column;
+
+	@media screen and (min-width: 544px) {
+		flex-direction: row;
+	}
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	background: #3da2cc;
+	padding: 0.5rem;
+	text-align: center;
+	gap: 0.5rem;
+
+	@media screen and (min-width: 544px) {
+		padding: 1rem;
+	}
+}
+
+.card h3 {
+	font-weight: normal;
+}
+
+.card:nth-child(2) {
+	background: #026489;
+}
+
+.card:nth-child(3) {
+	background: #04719c;
+}
+
+.featuredListings h2 {
+	text-align: center;
+	margin: 1.5rem;
+	text-transform: uppercase;
+	color: #04719c;
+	font-weight: normal;
+	font-size: 32px;
+
+	@media screen and (min-width: 544px) {
+		font-size: 44px;
+	}
+}
+
+.featuredListingsContainer {
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction: column;
+	gap: 1rem;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+	width: 100%;
+
+	@media screen and (min-width: 544px) {
+		flex-direction: row;
+	}
+}
+
+.featuredListingInfo {
+	color: white;
+	font-size: 14px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+
+.listing {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
+		url("/assets/featured-home.jpeg");
+	flex-basis: 31%;
+	min-height: 300px;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+}
+
+.listing h3 {
+	font-weight: normal;
+}
+
+footer {
+	background-color: #068abe;
+	color: white;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footerLogo {
+	margin: 1rem auto;
+}
+
+.contactInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.contactInfo span {
+	font-weight: bold;
+}
+
+#deltaOffice {
+	font-size: 20px;
+}
+
+#officeAddress {
+	font-size: 14px;
+}
+
+.phoneNumber {
+	font-size: 14px;
+}
+
+.footerInfo {
+	background: #034a63;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	font-size: 12px;
+}
+
+.footerInfo ul {
+	list-style-type: none;
+	display: flex;
+	padding: unset;
+	white-space: nowrap;
+	gap: 1rem;
+}
+
+.footerInfo .icons {
+	display: flex;
+	justify-content: center;
+}
